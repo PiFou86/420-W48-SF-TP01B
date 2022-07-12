@@ -23,7 +23,7 @@
 - Le répertoire source doit suivre la structure d’un projet Platform.io
 - Vous devez fournir une vidéo de 5 minutes illustrant le circuit, le code et le fonctionnement :
   - La vidéo doit être déposée sur Youtube avec une option de partage « non listée »
-  - Le lien de la vidéo doit être indiqué dans le document word et dans le fichier "AUTHORS.md"
+  - Le lien de la vidéo doit être indiqué dans le document word AINSI QUE dans le fichier "AUTHORS.md"
 
 - Le répertoire "documents" doit contenir votre rapport de TP
 
@@ -72,7 +72,7 @@ Votre tâche générale consiste à mettre en place une première version du pro
 Ce système comprend :
 
 - Un ensemble de DELs
-- Trois boutons poussoirs, chacun représentant une des lettres parmi 'A', 'B', 'C'.
+- Trois boutons poussoirs, chacun représenté par les symboles 'A', 'B', 'C'.
 
 ### 2.1 - Procédures pour déverrouiller la serrure
 
@@ -94,7 +94,7 @@ Pour modifier le code, le client doit déverrouiller la serrure et dans le déla
 
 ### 2.4 - Considérations techniques
 
-- À la première utilisation de votre serrure, le code est "ABC"
+- À la première utilisation de votre serrure, le code est "ABCA"
 - Le nouveau code doit être enregistré dans votre EEPROM et rechargé à chaque démarrage de votre serrure
 
 ## 3 - Description détaillée du document à remettre
