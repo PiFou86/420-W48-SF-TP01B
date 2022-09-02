@@ -86,11 +86,34 @@ Au bout de trois (3) tentatives infructueuses, la DEL rouge clignote pendant dix
 
 La saisie doit pouvoir s'effectuer en quatre (4) secondes maximum.
 
+La serrure reste déverrouillée durant cinq (5) secondes.
+
 **ATTENTION, la saisie doit pouvoir s'effectuer même pendant les clignotements des DELs.**
 
 ### 2.2 - Modification du code
 
 Pour modifier le code, le client doit déverrouiller la serrure et dans le délai de cinq (5) secondes, il doit appuyer simultanément sur les trois (3) boutons poussoirs pendant deux (2) secondes. La DEL verte clignote à une fréquence de deux (2) Hz. L'utilisateur peut alors taper les quatre (4) lettres du code. La DEL verte reste allumée une (1) seconde et se remet à clignoter à une fréquence de deux (2) Hz en attente de la répétition du nouveau code. Si le code est correct, la DEL verte et la DEL rouge clignote pendant une (1) seconde à une fréquence de deux (2) Hz et le nouveau code est en fonction. Si la deuxième saisie n'est pas la même que la première, la DEL rouge reste allumée pendant une seconde et le nouveau code n'est pas pris en compte.
+
+### 2.3 - Diagramme et tableau machine état fini
+
+![](doc/EtatTransition.svg)
+
+|   | **Nombre transitions** | **Démarrage** | **Repos1** | **Repos2** | **SaisieCode** | **CodeValide** | **CodeInvalide** | **CodeInvalideEssaisInférieurLimite** | **CodeInvalideEssaisSuppérieurEgaleLimite** | **ChangementMotPasse** | **ChangementMotPasseConfirmation** | **ChangementMotPasseOkAttente** | **ChangementMotPasseOk** | **ChangementMotPasseNonOkAttente** | **ChangementMotPasseNonOk** |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| **Démarrage** | 1 |   | _Timeout 0s_ |   |   |   |   |   |   |   |   |   |   |   |   |
+| **Repos1** | 2 |   |   | _Timeout 10s_ | Bouton A ou B ou C |   |   |   |   |   |   |   |   |   |   |
+| **Repos2** | 2 |   | _Timeout 1s_ |   | Bouton A ou B ou C |   |   |   |   |   |   |   |   |   |   |
+| **SaisieCode** | 4 |   |   | _Timeout 4s_ | Bouton A ou B ou C * 3 | Code valide | Code invalide |   |   |   |   |   |   |   |   |
+| **CodeValide** | 2 |   | _Timeout 5s_ |   |   |   |   |   |   | Bouton A et B et C |   |   |   |   |   |
+| **CodeInvalide** | 2 |   |   |   |   |   |   | nbEssais inférieur limite | nbEssais supérieur égale limite |   |   |   |   |   |   |
+| **CodeInvalideEssaisInférieurLimite** | 1 |   | _Timeout 2s_ |   |   |   |   |   |   |   |   |   |   |   |   |
+| **CodeInvalideEssaisSuppérieurEgaleLimite** | 1 |   | _Timeout 10s_ |   |   |   |   |   |   |   |   |   |   |   |   |
+| **ChangementMotPasse** | 3 |   |   | _Timeout 5s_ |   |   |   |   |   | Bouton A ou B ou C * 4 | Confirmation nouveau code |   |   |   |   |
+| **ChangementMotPasseConfirmation** | 4 |   |   | _Timeout 5s_ |   |   |   |   |   |   | Bouton A ou B ou C * 4 | nouveau code valide |   | nouveau code invalide |   |
+| **ChangementMotPasseOkAttente** | 1 |   |   |   |   |   |   |   |   |   |   |   | _Timeout 1s_ |   |   |
+| **ChangementMotPasseOk** | 1 |   | _Timeout 2s_ |   |   |   |   |   |   |   |   |   |   |   |   |
+| **ChangementMotPasseNonOkAttente** | 1 |   |   |   |   |   |   |   |   |   |   |   |   |   | _Timeout 1s_ |
+| **ChangementMotPasseNonOk** | 1 |   | _Timeout 2s_ |   |   |   |   |   |   |   |   |   |   |   |   |
 
 ### 2.4 - Considérations techniques
 

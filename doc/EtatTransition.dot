@@ -1,0 +1,94 @@
+digraph finite_state_machine {
+	//fontname="Helvetica,Arial,sans-serif"
+	//node [fontname="Helvetica,Arial,sans-serif"]
+	//edge [fontname="Helvetica,Arial,sans-serif"]
+	//rankdir=LR;
+	node [shape = doublecircle]; Démarrage;
+	node [shape = circle];
+	
+	Démarrage [label=<<b>Démarrage</b><br />!R, !V<br />!O<br />""<br />0>];
+
+	Repos1 [label=<<b>Repos1</b><br />!R, !V<br />!O<br />""<br />nbEssais>];
+	Repos2 [label=<<b>Repos2</b><br />R, !V<br />!O<br />""<br />nbEssais>];
+	
+	SaisieCode [label=<<b>SaisieCode</b><br />!R, !V<br />!O<br />"xyzt"<br />nbEssais>];
+
+	CodeValide [label=<<b>CodeValide</b><br />!R, V<br />O<br />""<br />nbEssai = 0>];
+	CodeInvalide [label=<<b>CodeInvalide</b><br />R clignote, !V<br />!O<br />""<br />nbEssais += 1>];
+
+	CodeInvalideEssaisSupérieurEgaleLimite [label=<<b>CodeInvalideEssaisSupérieurEgaleLimite</b><br />R clignote, !V<br />!O<br />""<br />0>];
+	CodeInvalideEssaisInférieurLimite [label=<<b>CodeInvalideEssaisInférieurLimite</b><br />R clignote, !V<br />!O<br />""<br />nbEssais>];
+	
+	ChangementMotPasse [label=<<b>ChangementMotPasse</b><br />R clignote, V<br />!O<br />""<br />0>];
+	ChangementMotPasseConfirmation [label=<<b>ChangementMotPasseConfirmation</b><br />R clignote, V<br />!O<br />"xyzt"<br />0>];
+
+	ChangementMotPasseOkAttente [label=<<b>ChangementMotPasseOkAttente</b><br />!R, !V<br />!O<br />""<br />0>];
+	ChangementMotPasseOk [label=<<b>ChangementMotPasseOk</b><br />R clignote, V clignote<br />!O<br />""<br />0>];
+	ChangementMotPasseNonOkAttente [label=<<b>ChangementMotPasseNonOkAttente</b><br />!R, !V<br />!O<br />""<br />0>];
+	ChangementMotPasseNonOk [label=<<b>ChangementMotPasseNonOk</b><br />R clignote, !V<br />!O<br />""<br />0>];
+	
+	Démarrage -> Repos1 [label = "Timeout 0s"];
+
+	Repos1 -> Repos2 [label = "Timeout 10s"];
+	Repos1 -> SaisieCode [label = "Bouton A ou B ou C"];
+	
+	Repos2 -> Repos1 [label = "Timeout 1s"];
+	Repos2 -> SaisieCode [label = "Bouton A ou B ou C"];
+	
+	SaisieCode -> Repos2 [label = "Timeout 4s"];
+	SaisieCode -> SaisieCode [label = "Bouton A ou B ou C * 3"];
+	SaisieCode -> CodeValide [label = "Code valide"];
+	SaisieCode -> CodeInvalide [label = "Code invalide"];
+	
+    CodeValide -> ChangementMotPasse [label = "Bouton A et B et C"];
+    CodeValide -> Repos1 [label = "Timeout 5s"];
+    
+    ChangementMotPasse -> ChangementMotPasse [label = "Bouton A ou B ou C * 4"];
+    ChangementMotPasse -> Repos2 [label = "Timeout 5s"];
+    ChangementMotPasse -> ChangementMotPasseConfirmation [label = "Confirmation nouveau code"];
+    
+    ChangementMotPasseConfirmation -> ChangementMotPasseConfirmation [label = "Bouton A ou B ou C * 4"];
+    ChangementMotPasseConfirmation -> Repos2 [label = "Timeout 5s"];
+    ChangementMotPasseConfirmation -> ChangementMotPasseOkAttente [label = "Nouveau code valide"];
+    ChangementMotPasseConfirmation -> ChangementMotPasseNonOkAttente [label = "Nouveau code invalide"];
+    
+    ChangementMotPasseOkAttente -> ChangementMotPasseOk [label = "Timeout 1s"];
+    ChangementMotPasseOk -> Repos1 [label = "Timeout 1s"];
+
+    ChangementMotPasseNonOkAttente -> ChangementMotPasseNonOk [label = "Timeout 1s"];
+    ChangementMotPasseNonOk -> Repos1 [label = "Timeout 1s"];
+    
+    CodeInvalide -> CodeInvalideEssaisInférieurLimite  [label = "nbEssais inférieur limite"];
+    CodeInvalide -> CodeInvalideEssaisSupérieurEgaleLimite  [label = "nbEssais supérieur égale limite"];
+
+    CodeInvalideEssaisInférieurLimite -> Repos1 [label = "Timeout 2s"];
+    CodeInvalideEssaisSupérieurEgaleLimite -> Repos1 [label = "Timeout 10s"];
+/*
+    Etats : 
+     - 0
+     - Repos1
+	 - Repos2
+	 - SaisieCode
+	 - CodeValide
+	 - CodeInvalide
+	 - CodeInvalideEssaisInférieurLimite
+     - CodeInvalideEssaisSupérieurEgaleLimite
+	 - ChangementMotPasse
+	 - ChangementMotPasseConfirmation
+	 - ChangementMotPasseOkAttente
+	 - ChangementMotPasseOk
+	 - ChangementMotPasseNonOkAttente
+	 - ChangementMotPasseNonOk
+
+    Transitions :
+     - Timeout xs
+     - Bouton A ou B ou C
+     - Bouton A et B et C
+     - Code valide
+     - Code invalide
+     - Confirmation nouveau code
+     - Nouveau code valide
+     - Nouveau code invalide
+*/
+
+}

@@ -1,0 +1,34 @@
+@startuml
+
+[*] -> Verrouillée
+
+state Verrouillée {
+    V1A : !V !R
+    V1B : !V R
+
+    V1A -> V1B : timeout 10s      
+    V1B -> V1A : timeout 1s       
+
+    V1A -> V2A : button press (1)
+    V1B -> V2A : button press (1)
+
+    V2A -> V2B : button press (2)
+    V2A -> V1A : timeout 4s
+    V2B -> V2C : button press (3)
+    V2B -> V1A : timeout 4s
+    V2C -> V3 : button press (4)
+    V2C -> V1A : timeout 4s
+
+    V3 -> V1A : code invalide
+
+    V3 -> Déverrouillée : Code valide
+}
+
+state Déverrouillée {
+
+}
+
+Déverrouillée -> V1A : timeout 5s
+Déverrouillée -> D1A : all buttons pressed during 3s
+
+@enduml

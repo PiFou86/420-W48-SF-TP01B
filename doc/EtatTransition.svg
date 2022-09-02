@@ -1,0 +1,330 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1290pt" height="2343pt" viewBox="0.00 0.00 1290.38 2342.98">
+<g id="graph0" class="graph" transform="translate(4,2338.97998046875) scale(1)" data-name="finite_state_machine">
+
+<polygon fill="white" stroke="none" points="-4,4 -4,-2338.98 1286.38,-2338.98 1286.38,4 -4,4" style=""/>
+<!-- Démarrage -->
+<g id="node1" class="node" pointer-events="visible" data-name="Démarrage">
+
+<ellipse fill="none" stroke="black" cx="683" cy="-2271.29" rx="59.87" ry="59.87" style=""/>
+<ellipse fill="none" stroke="black" cx="683" cy="-2271.29" rx="63.88" ry="63.88" style=""/>
+<text text-anchor="start" x="648.79" y="-2294.69" font-family="Times,serif" font-weight="bold" font-size="14.00" style="">Démarrage</text>
+<text text-anchor="start" x="665.11" y="-2280.69" font-family="Times,serif" font-size="14.00" style="">!R, !V</text>
+<text text-anchor="start" x="675.61" y="-2266.69" font-family="Times,serif" font-size="14.00" style="">!O</text>
+<text text-anchor="start" x="677.29" y="-2252.69" font-family="Times,serif" font-size="14.00" style="">""</text>
+<text text-anchor="start" x="679.5" y="-2238.69" font-family="Times,serif" font-size="14.00" style="">0</text>
+</g>
+<!-- Repos1 -->
+<g id="node2" class="node" pointer-events="visible" data-name="Repos1">
+
+<ellipse fill="none" stroke="black" cx="683" cy="-2099.64" rx="55.31" ry="55.31" style=""/>
+<text text-anchor="start" x="661.22" y="-2123.04" font-family="Times,serif" font-weight="bold" font-size="14.00" style="">Repos1</text>
+<text text-anchor="start" x="665.11" y="-2109.04" font-family="Times,serif" font-size="14.00" style="">!R, !V</text>
+<text text-anchor="start" x="675.61" y="-2095.04" font-family="Times,serif" font-size="14.00" style="">!O</text>
+<text text-anchor="start" x="677.29" y="-2081.04" font-family="Times,serif" font-size="14.00" style="">""</text>
+<text text-anchor="start" x="658.5" y="-2067.04" font-family="Times,serif" font-size="14.00" style="">nbEssais</text>
+</g>
+<!-- Démarrage&#45;&gt;Repos1 -->
+<g id="edge1" class="edge" data-name="Démarrage-&gt;Repos1">
+
+<path fill="none" stroke="black" d="M683,-2207.12C683,-2193.45 683,-2178.99 683,-2165.27" style=""/>
+<polygon fill="black" stroke="black" points="686.5,-2164.95 683,-2154.95 679.5,-2164.95 686.5,-2164.95" style=""/>
+<text text-anchor="middle" x="714.69" y="-2177" font-family="Times,serif" font-size="14.00" style="">Timeout 0s</text>
+</g>
+<!-- Repos2 -->
+<g id="node3" class="node" pointer-events="visible" data-name="Repos2">
+
+<ellipse fill="none" stroke="black" cx="821" cy="-1936.53" rx="55.31" ry="55.31" style=""/>
+<text text-anchor="start" x="799.22" y="-1959.93" font-family="Times,serif" font-weight="bold" font-size="14.00" style="">Repos2</text>
+<text text-anchor="start" x="805.44" y="-1945.93" font-family="Times,serif" font-size="14.00" style="">R, !V</text>
+<text text-anchor="start" x="813.61" y="-1931.93" font-family="Times,serif" font-size="14.00" style="">!O</text>
+<text text-anchor="start" x="815.29" y="-1917.93" font-family="Times,serif" font-size="14.00" style="">""</text>
+<text text-anchor="start" x="796.5" y="-1903.93" font-family="Times,serif" font-size="14.00" style="">nbEssais</text>
+</g>
+<!-- Repos1&#45;&gt;Repos2 -->
+<g id="edge2" class="edge" data-name="Repos1-&gt;Repos2">
+
+<path fill="none" stroke="black" d="M725.66,-2063.85C738.34,-2052.56 751.82,-2039.57 763,-2026.49 771.69,-2016.33 780.11,-2004.78 787.71,-1993.46" style=""/>
+<polygon fill="black" stroke="black" points="790.79,-1995.14 793.36,-1984.87 784.94,-1991.3 790.79,-1995.14" style=""/>
+<text text-anchor="middle" x="811.19" y="-2013.89" font-family="Times,serif" font-size="14.00" style="">Timeout 10s</text>
+</g>
+<!-- SaisieCode -->
+<g id="node4" class="node" pointer-events="visible" data-name="SaisieCode">
+
+<ellipse fill="none" stroke="black" cx="661" cy="-1771.06" rx="57.53" ry="57.53" style=""/>
+<text text-anchor="start" x="628.33" y="-1794.46" font-family="Times,serif" font-weight="bold" font-size="14.00" style="">SaisieCode</text>
+<text text-anchor="start" x="643.11" y="-1780.46" font-family="Times,serif" font-size="14.00" style="">!R, !V</text>
+<text text-anchor="start" x="653.61" y="-1766.46" font-family="Times,serif" font-size="14.00" style="">!O</text>
+<text text-anchor="start" x="643.23" y="-1752.46" font-family="Times,serif" font-size="14.00" style="">"xyzt"</text>
+<text text-anchor="start" x="636.5" y="-1738.46" font-family="Times,serif" font-size="14.00" style="">nbEssais</text>
+</g>
+<!-- Repos1&#45;&gt;SaisieCode -->
+<g id="edge3" class="edge" data-name="Repos1-&gt;SaisieCode">
+
+<path fill="none" stroke="black" d="M659.52,-2049.44C652.22,-2031.66 645.13,-2011.17 641.49,-1991.69 631.84,-1940.2 638.09,-1881 645.99,-1837.05" style=""/>
+<polygon fill="black" stroke="black" points="649.45,-1837.54 647.85,-1827.07 642.57,-1836.25 649.45,-1837.54" style=""/>
+<text text-anchor="middle" x="699.76" y="-1932.33" font-family="Times,serif" font-size="14.00" style="">Bouton A ou B ou C</text>
+</g>
+<!-- Repos2&#45;&gt;Repos1 -->
+<g id="edge4" class="edge" data-name="Repos2-&gt;Repos1">
+
+<path fill="none" stroke="black" d="M779.95,-1973.57C771.12,-1980.21 761.55,-1986.63 752,-1991.69 728.76,-2004 712.59,-1989.59 695.62,-2009.69 689.63,-2016.78 685.74,-2025.37 683.31,-2034.39" style=""/>
+<polygon fill="black" stroke="black" points="679.86,-2033.79 681.2,-2044.3 686.7,-2035.25 679.86,-2033.79" style=""/>
+<text text-anchor="middle" x="727.69" y="-2013.89" font-family="Times,serif" font-size="14.00" style="">Timeout 1s</text>
+</g>
+<!-- Repos2&#45;&gt;SaisieCode -->
+<g id="edge5" class="edge" data-name="Repos2-&gt;SaisieCode">
+
+<path fill="none" stroke="black" d="M780.24,-1898.91C771.39,-1892.32 761.74,-1886.06 752,-1881.38 720.52,-1866.24 699.26,-1888.97 675.49,-1863.38 669.07,-1856.47 664.83,-1847.92 662.12,-1838.85" style=""/>
+<polygon fill="black" stroke="black" points="665.46,-1837.77 659.73,-1828.86 658.65,-1839.4 665.46,-1837.77" style=""/>
+<text text-anchor="middle" x="733.76" y="-1850.78" font-family="Times,serif" font-size="14.00" style="">Bouton A ou B ou C</text>
+</g>
+<!-- SaisieCode&#45;&gt;Repos2 -->
+<g id="edge6" class="edge" data-name="SaisieCode-&gt;Repos2">
+
+<path fill="none" stroke="black" d="M714.66,-1792.08C740.88,-1804.28 771.02,-1822.26 791,-1846.58 797.36,-1854.32 802.4,-1863.48 806.38,-1872.92" style=""/>
+<polygon fill="black" stroke="black" points="803.17,-1874.34 810.02,-1882.42 809.71,-1871.83 803.17,-1874.34" style=""/>
+<text text-anchor="middle" x="832.69" y="-1850.78" font-family="Times,serif" font-size="14.00" style="">Timeout 4s</text>
+</g>
+<!-- SaisieCode&#45;&gt;SaisieCode -->
+<g id="edge7" class="edge" data-name="SaisieCode-&gt;SaisieCode">
+
+<path fill="none" stroke="black" d="M716.65,-1785.9C728.21,-1784.34 736.51,-1779.39 736.51,-1771.06 736.51,-1765.34 732.59,-1761.21 726.38,-1758.68" style=""/>
+<polygon fill="black" stroke="black" points="727.2,-1755.28 716.65,-1756.23 725.49,-1762.07 727.2,-1755.28" style=""/>
+<text text-anchor="middle" x="804.77" y="-1766.86" font-family="Times,serif" font-size="14.00" style="">Bouton A ou B ou C * 3</text>
+</g>
+<!-- CodeValide -->
+<g id="node5" class="node" pointer-events="visible" data-name="CodeValide">
+
+<ellipse fill="none" stroke="black" cx="939" cy="-1592.78" rx="60.62" ry="60.62" style=""/>
+<text text-anchor="start" x="904" y="-1616.18" font-family="Times,serif" font-weight="bold" font-size="14.00" style="">CodeValide</text>
+<text text-anchor="start" x="923.44" y="-1602.18" font-family="Times,serif" font-size="14.00" style="">!R, V</text>
+<text text-anchor="start" x="933.94" y="-1588.18" font-family="Times,serif" font-size="14.00" style="">O</text>
+<text text-anchor="start" x="933.29" y="-1574.18" font-family="Times,serif" font-size="14.00" style="">""</text>
+<text text-anchor="start" x="906.28" y="-1560.18" font-family="Times,serif" font-size="14.00" style="">nbEssai = 0</text>
+</g>
+<!-- SaisieCode&#45;&gt;CodeValide -->
+<g id="edge8" class="edge" data-name="SaisieCode-&gt;CodeValide">
+
+<path fill="none" stroke="black" d="M713,-1746.27C755.22,-1725.98 815.49,-1694.76 864,-1660.75 872.04,-1655.11 880.17,-1648.72 887.96,-1642.18" style=""/>
+<polygon fill="black" stroke="black" points="890.31,-1644.77 895.62,-1635.6 885.75,-1639.46 890.31,-1644.77" style=""/>
+<text text-anchor="middle" x="866.63" y="-1682.95" font-family="Times,serif" font-size="14.00" style="">Code valide</text>
+</g>
+<!-- CodeInvalide -->
+<g id="node6" class="node" pointer-events="visible" data-name="CodeInvalide">
+
+<ellipse fill="none" stroke="black" cx="358" cy="-1592.78" rx="67.94" ry="67.94" style=""/>
+<text text-anchor="start" x="317.94" y="-1616.18" font-family="Times,serif" font-weight="bold" font-size="14.00" style="">CodeInvalide</text>
+<text text-anchor="start" x="318.15" y="-1602.18" font-family="Times,serif" font-size="14.00" style="">R clignote, !V</text>
+<text text-anchor="start" x="350.61" y="-1588.18" font-family="Times,serif" font-size="14.00" style="">!O</text>
+<text text-anchor="start" x="352.29" y="-1574.18" font-family="Times,serif" font-size="14.00" style="">""</text>
+<text text-anchor="start" x="318.6" y="-1560.18" font-family="Times,serif" font-size="14.00" style="">nbEssais += 1</text>
+</g>
+<!-- SaisieCode&#45;&gt;CodeInvalide -->
+<g id="edge9" class="edge" data-name="SaisieCode-&gt;CodeInvalide">
+
+<path fill="none" stroke="black" d="M617.02,-1733.45C607.98,-1726.52 598.35,-1719.57 589,-1713.55 537.36,-1680.31 475.43,-1648.6 428.7,-1626.17" style=""/>
+<polygon fill="black" stroke="black" points="430.09,-1622.96 419.56,-1621.81 427.08,-1629.28 430.09,-1622.96" style=""/>
+<text text-anchor="middle" x="598.07" y="-1682.95" font-family="Times,serif" font-size="14.00" style="">Code invalide</text>
+</g>
+<!-- CodeValide&#45;&gt;Repos1 -->
+<g id="edge11" class="edge" data-name="CodeValide-&gt;Repos1">
+
+<path fill="none" stroke="black" d="M943.94,-1653.63C947.92,-1735.39 945.04,-1884.09 885,-1991.69 856.69,-2042.42 794.69,-2070.11 746.79,-2084.52" style=""/>
+<polygon fill="black" stroke="black" points="745.75,-2081.17 737.11,-2087.31 747.69,-2087.9 745.75,-2081.17" style=""/>
+<text text-anchor="middle" x="963.69" y="-1850.78" font-family="Times,serif" font-size="14.00" style="">Timeout 5s</text>
+</g>
+<!-- ChangementMotPasse -->
+<g id="node9" class="node" pointer-events="visible" data-name="ChangementMotPasse">
+
+<ellipse fill="none" stroke="black" cx="931" cy="-1283.59" rx="105.79" ry="105.79" style=""/>
+<text text-anchor="start" x="864.12" y="-1306.99" font-family="Times,serif" font-weight="bold" font-size="14.00" style="">ChangementMotPasse</text>
+<text text-anchor="start" x="893.48" y="-1292.99" font-family="Times,serif" font-size="14.00" style="">R clignote, V</text>
+<text text-anchor="start" x="923.61" y="-1278.99" font-family="Times,serif" font-size="14.00" style="">!O</text>
+<text text-anchor="start" x="925.29" y="-1264.99" font-family="Times,serif" font-size="14.00" style="">""</text>
+<text text-anchor="start" x="927.5" y="-1250.99" font-family="Times,serif" font-size="14.00" style="">0</text>
+</g>
+<!-- CodeValide&#45;&gt;ChangementMotPasse -->
+<g id="edge10" class="edge" data-name="CodeValide-&gt;ChangementMotPasse">
+
+<path fill="none" stroke="black" d="M923.65,-1533.58C921.84,-1524.67 920.28,-1515.54 919.28,-1506.81 915.28,-1471.88 915.6,-1433.69 917.69,-1398.99" style=""/>
+<polygon fill="black" stroke="black" points="921.19,-1399.02 918.35,-1388.82 914.21,-1398.57 921.19,-1399.02" style=""/>
+<text text-anchor="middle" x="972.86" y="-1494.21" font-family="Times,serif" font-size="14.00" style="">Bouton A et B et C</text>
+</g>
+<!-- CodeInvalideEssaisSupérieurEgaleLimite -->
+<g id="node7" class="node" pointer-events="visible" data-name="CodeInvalideEssaisSupérieurEgaleLimite">
+
+<ellipse fill="none" stroke="black" cx="556" cy="-1283.59" rx="188.34" ry="188.34" style=""/>
+<text text-anchor="start" x="430.77" y="-1306.99" font-family="Times,serif" font-weight="bold" font-size="14.00" style="">CodeInvalideEssaisSupérieurEgaleLimite</text>
+<text text-anchor="start" x="516.15" y="-1292.99" font-family="Times,serif" font-size="14.00" style="">R clignote, !V</text>
+<text text-anchor="start" x="548.61" y="-1278.99" font-family="Times,serif" font-size="14.00" style="">!O</text>
+<text text-anchor="start" x="550.29" y="-1264.99" font-family="Times,serif" font-size="14.00" style="">""</text>
+<text text-anchor="start" x="552.5" y="-1250.99" font-family="Times,serif" font-size="14.00" style="">0</text>
+</g>
+<!-- CodeInvalide&#45;&gt;CodeInvalideEssaisSupérieurEgaleLimite -->
+<g id="edge24" class="edge" data-name="CodeInvalide-&gt;CodeInvalideEssaisSupérieurEgaleLimite">
+
+<path fill="none" stroke="black" d="M351.27,-1524.94C352.05,-1512.99 354.22,-1500.9 358.64,-1490.01 369.76,-1462.63 386.44,-1436.85 405.48,-1413.4" style=""/>
+<polygon fill="black" stroke="black" points="408.32,-1415.46 412.02,-1405.54 402.94,-1410.99 408.32,-1415.46" style=""/>
+<text text-anchor="middle" x="446.68" y="-1494.21" font-family="Times,serif" font-size="14.00" style="">nbEssais supérieur égale limite</text>
+</g>
+<!-- CodeInvalideEssaisInférieurLimite -->
+<g id="node8" class="node" pointer-events="visible" data-name="CodeInvalideEssaisInférieurLimite">
+
+<ellipse fill="none" stroke="black" cx="189" cy="-1283.59" rx="160.83" ry="160.83" style=""/>
+<text text-anchor="start" x="83.22" y="-1306.99" font-family="Times,serif" font-weight="bold" font-size="14.00" style="">CodeInvalideEssaisInférieurLimite</text>
+<text text-anchor="start" x="149.15" y="-1292.99" font-family="Times,serif" font-size="14.00" style="">R clignote, !V</text>
+<text text-anchor="start" x="181.61" y="-1278.99" font-family="Times,serif" font-size="14.00" style="">!O</text>
+<text text-anchor="start" x="183.29" y="-1264.99" font-family="Times,serif" font-size="14.00" style="">""</text>
+<text text-anchor="start" x="164.5" y="-1250.99" font-family="Times,serif" font-size="14.00" style="">nbEssais</text>
+</g>
+<!-- CodeInvalide&#45;&gt;CodeInvalideEssaisInférieurLimite -->
+<g id="edge23" class="edge" data-name="CodeInvalide-&gt;CodeInvalideEssaisInférieurLimite">
+
+<path fill="none" stroke="black" d="M292.61,-1574.2C258.44,-1561.39 219.44,-1540.29 198.36,-1506.81 188.24,-1490.74 181.67,-1472.64 177.64,-1453.89" style=""/>
+<polygon fill="black" stroke="black" points="181.08,-1453.2 175.77,-1444.03 174.2,-1454.51 181.08,-1453.2" style=""/>
+<text text-anchor="middle" x="267.82" y="-1494.21" font-family="Times,serif" font-size="14.00" style="">nbEssais inférieur limite</text>
+</g>
+<!-- CodeInvalideEssaisSupérieurEgaleLimite&#45;&gt;Repos1 -->
+<g id="edge26" class="edge" data-name="CodeInvalideEssaisSupérieurEgaleLimite-&gt;Repos1">
+
+<path fill="none" stroke="black" d="M538.98,-1471.35C526.89,-1614.98 514.31,-1794.5 523.62,-1828.58 546.56,-1912.58 603.05,-1997.04 642.21,-2048.59" style=""/>
+<polygon fill="black" stroke="black" points="639.47,-2050.77 648.34,-2056.57 645.03,-2046.51 639.47,-2050.77" style=""/>
+<text text-anchor="middle" x="559.19" y="-1766.86" font-family="Times,serif" font-size="14.00" style="">Timeout 10s</text>
+</g>
+<!-- CodeInvalideEssaisInférieurLimite&#45;&gt;Repos1 -->
+<g id="edge25" class="edge" data-name="CodeInvalideEssaisInférieurLimite-&gt;Repos1">
+
+<path fill="none" stroke="black" d="M171.1,-1443.83C167.09,-1491.36 164,-1543.62 164,-1591.78 164,-1937.53 164,-1937.53 164,-1937.53 164,-2031.53 478.44,-2076.81 617.82,-2092.26" style=""/>
+<polygon fill="black" stroke="black" points="617.63,-2095.76 627.95,-2093.36 618.39,-2088.8 617.63,-2095.76" style=""/>
+<text text-anchor="middle" x="195.69" y="-1766.86" font-family="Times,serif" font-size="14.00" style="">Timeout 2s</text>
+</g>
+<!-- ChangementMotPasse&#45;&gt;Repos2 -->
+<g id="edge13" class="edge" data-name="ChangementMotPasse-&gt;Repos2">
+
+<path fill="none" stroke="black" d="M983.97,-1375.61C1001.28,-1410.24 1018.29,-1450.81 1027,-1490.01 1063.04,-1652.26 1103.77,-1728.97 1006,-1863.38 978.27,-1901.5 927.39,-1919.48 886,-1927.96" style=""/>
+<polygon fill="black" stroke="black" points="885.14,-1924.56 875.97,-1929.87 886.45,-1931.44 885.14,-1924.56" style=""/>
+<text text-anchor="middle" x="1097.69" y="-1682.95" font-family="Times,serif" font-size="14.00" style="">Timeout 5s</text>
+</g>
+<!-- ChangementMotPasse&#45;&gt;ChangementMotPasse -->
+<g id="edge12" class="edge" data-name="ChangementMotPasse-&gt;ChangementMotPasse">
+
+<path fill="none" stroke="black" d="M1030.65,-1319.79C1045.14,-1314.05 1054.9,-1301.98 1054.9,-1283.59 1054.9,-1269.36 1049.06,-1258.92 1039.71,-1252.26" style=""/>
+<polygon fill="black" stroke="black" points="1041.11,-1249.04 1030.65,-1247.38 1037.79,-1255.2 1041.11,-1249.04" style=""/>
+<text text-anchor="middle" x="1123.15" y="-1279.39" font-family="Times,serif" font-size="14.00" style="">Bouton A ou B ou C * 4</text>
+</g>
+<!-- ChangementMotPasseConfirmation -->
+<g id="node10" class="node" pointer-events="visible" data-name="ChangementMotPasseConfirmation">
+
+<ellipse fill="none" stroke="black" cx="835" cy="-878.73" rx="163.78" ry="163.78" style=""/>
+<text text-anchor="start" x="727.29" y="-902.13" font-family="Times,serif" font-weight="bold" font-size="14.00" style="">ChangementMotPasseConfirmation</text>
+<text text-anchor="start" x="797.48" y="-888.13" font-family="Times,serif" font-size="14.00" style="">R clignote, V</text>
+<text text-anchor="start" x="827.61" y="-874.13" font-family="Times,serif" font-size="14.00" style="">!O</text>
+<text text-anchor="start" x="817.23" y="-860.13" font-family="Times,serif" font-size="14.00" style="">"xyzt"</text>
+<text text-anchor="start" x="831.5" y="-846.13" font-family="Times,serif" font-size="14.00" style="">0</text>
+</g>
+<!-- ChangementMotPasse&#45;&gt;ChangementMotPasseConfirmation -->
+<g id="edge14" class="edge" data-name="ChangementMotPasse-&gt;ChangementMotPasseConfirmation">
+
+<path fill="none" stroke="black" d="M906.65,-1180.41C897.08,-1140.23 885.83,-1093.03 875.12,-1048.09" style=""/>
+<polygon fill="black" stroke="black" points="878.49,-1047.15 872.77,-1038.24 871.69,-1048.77 878.49,-1047.15" style=""/>
+<text text-anchor="middle" x="958.15" y="-1064.57" font-family="Times,serif" font-size="14.00" style="">Confirmation nouveau code</text>
+</g>
+<!-- ChangementMotPasseConfirmation&#45;&gt;Repos2 -->
+<g id="edge16" class="edge" data-name="ChangementMotPasseConfirmation-&gt;Repos2">
+
+<path fill="none" stroke="black" d="M819.6,-1041.69C818.21,-1059.72 816.97,-1077.83 816,-1095.17 796.73,-1438.51 794.68,-1597.4 805.62,-1660.75 808.41,-1676.93 806.01,-1684.34 818,-1695.55 839.59,-1715.72 864.16,-1690 882,-1713.55 919.6,-1763.19 888.84,-1834.63 859,-1882.95" style=""/>
+<polygon fill="black" stroke="black" points="855.85,-1881.37 853.46,-1891.69 861.77,-1885.12 855.85,-1881.37" style=""/>
+<text text-anchor="middle" x="837.69" y="-1588.58" font-family="Times,serif" font-size="14.00" style="">Timeout 5s</text>
+</g>
+<!-- ChangementMotPasseConfirmation&#45;&gt;ChangementMotPasseConfirmation -->
+<g id="edge15" class="edge" data-name="ChangementMotPasseConfirmation-&gt;ChangementMotPasseConfirmation">
+
+<path fill="none" stroke="black" d="M996.48,-905.58C1008.95,-899.65 1016.64,-890.69 1016.64,-878.73 1016.64,-869.94 1012.49,-862.78 1005.35,-857.24" style=""/>
+<polygon fill="black" stroke="black" points="1006.85,-854.05 996.48,-851.87 1003.23,-860.04 1006.85,-854.05" style=""/>
+<text text-anchor="middle" x="1084.9" y="-874.53" font-family="Times,serif" font-size="14.00" style="">Bouton A ou B ou C * 4</text>
+</g>
+<!-- ChangementMotPasseOkAttente -->
+<g id="node11" class="node" pointer-events="visible" data-name="ChangementMotPasseOkAttente">
+
+<ellipse fill="none" stroke="black" cx="581" cy="-494.25" rx="150.37" ry="150.37" style=""/>
+<text text-anchor="start" x="482.63" y="-517.65" font-family="Times,serif" font-weight="bold" font-size="14.00" style="">ChangementMotPasseOkAttente</text>
+<text text-anchor="start" x="563.11" y="-503.65" font-family="Times,serif" font-size="14.00" style="">!R, !V</text>
+<text text-anchor="start" x="573.61" y="-489.65" font-family="Times,serif" font-size="14.00" style="">!O</text>
+<text text-anchor="start" x="575.29" y="-475.65" font-family="Times,serif" font-size="14.00" style="">""</text>
+<text text-anchor="start" x="577.5" y="-461.65" font-family="Times,serif" font-size="14.00" style="">0</text>
+</g>
+<!-- ChangementMotPasseConfirmation&#45;&gt;ChangementMotPasseOkAttente -->
+<g id="edge17" class="edge" data-name="ChangementMotPasseConfirmation-&gt;ChangementMotPasseOkAttente">
+
+<path fill="none" stroke="black" d="M744.91,-742.07C720.48,-705.28 694.05,-665.49 669.7,-628.81" style=""/>
+<polygon fill="black" stroke="black" points="672.33,-626.45 663.88,-620.06 666.5,-630.32 672.33,-626.45" style=""/>
+<text text-anchor="middle" x="767.09" y="-684.49" font-family="Times,serif" font-size="14.00" style="">Nouveau code valide</text>
+</g>
+<!-- ChangementMotPasseNonOkAttente -->
+<g id="node13" class="node" pointer-events="visible" data-name="ChangementMotPasseNonOkAttente">
+
+<ellipse fill="none" stroke="black" cx="976" cy="-494.25" rx="168.08" ry="168.08" style=""/>
+<text text-anchor="start" x="865.18" y="-517.65" font-family="Times,serif" font-weight="bold" font-size="14.00" style="">ChangementMotPasseNonOkAttente</text>
+<text text-anchor="start" x="958.11" y="-503.65" font-family="Times,serif" font-size="14.00" style="">!R, !V</text>
+<text text-anchor="start" x="968.61" y="-489.65" font-family="Times,serif" font-size="14.00" style="">!O</text>
+<text text-anchor="start" x="970.29" y="-475.65" font-family="Times,serif" font-size="14.00" style="">""</text>
+<text text-anchor="start" x="972.5" y="-461.65" font-family="Times,serif" font-size="14.00" style="">0</text>
+</g>
+<!-- ChangementMotPasseConfirmation&#45;&gt;ChangementMotPasseNonOkAttente -->
+<g id="edge18" class="edge" data-name="ChangementMotPasseConfirmation-&gt;ChangementMotPasseNonOkAttente">
+
+<path fill="none" stroke="black" d="M891.33,-724.91C898.98,-704.16 906.87,-682.78 914.6,-661.8" style=""/>
+<polygon fill="black" stroke="black" points="917.97,-662.79 918.14,-652.2 911.4,-660.37 917.97,-662.79" style=""/>
+<text text-anchor="middle" x="969.53" y="-684.49" font-family="Times,serif" font-size="14.00" style="">Nouveau code invalide</text>
+</g>
+<!-- ChangementMotPasseOk -->
+<g id="node12" class="node" pointer-events="visible" data-name="ChangementMotPasseOk">
+
+<ellipse fill="none" stroke="black" cx="263" cy="-136.71" rx="119.2" ry="119.2" style=""/>
+<text text-anchor="start" x="186.78" y="-160.11" font-family="Times,serif" font-weight="bold" font-size="14.00" style="">ChangementMotPasseOk</text>
+<text text-anchor="start" x="201.18" y="-146.11" font-family="Times,serif" font-size="14.00" style="">R clignote, V clignote</text>
+<text text-anchor="start" x="255.61" y="-132.11" font-family="Times,serif" font-size="14.00" style="">!O</text>
+<text text-anchor="start" x="257.29" y="-118.11" font-family="Times,serif" font-size="14.00" style="">""</text>
+<text text-anchor="start" x="259.5" y="-104.11" font-family="Times,serif" font-size="14.00" style="">0</text>
+</g>
+<!-- ChangementMotPasseOkAttente&#45;&gt;ChangementMotPasseOk -->
+<g id="edge19" class="edge" data-name="ChangementMotPasseOkAttente-&gt;ChangementMotPasseOk">
+
+<path fill="none" stroke="black" d="M480.82,-381.24C438.4,-333.81 389.47,-279.11 348.75,-233.57" style=""/>
+<polygon fill="black" stroke="black" points="351.3,-231.18 342.02,-226.06 346.08,-235.85 351.3,-231.18" style=""/>
+<text text-anchor="middle" x="444.69" y="-295.61" font-family="Times,serif" font-size="14.00" style="">Timeout 1s</text>
+</g>
+<!-- ChangementMotPasseOk&#45;&gt;Repos1 -->
+<g id="edge20" class="edge" data-name="ChangementMotPasseOk-&gt;Repos1">
+
+<path fill="none" stroke="black" d="M167.68,-208.6C92.41,-273.43 0,-376.74 0,-493.25 0,-1937.53 0,-1937.53 0,-1937.53 0,-2063.64 446.65,-2091.15 617.56,-2097.05" style=""/>
+<polygon fill="black" stroke="black" points="617.58,-2100.56 627.69,-2097.39 617.81,-2093.56 617.58,-2100.56" style=""/>
+<text text-anchor="middle" x="31.69" y="-1494.21" font-family="Times,serif" font-size="14.00" style="">Timeout 1s</text>
+</g>
+<!-- ChangementMotPasseNonOk -->
+<g id="node14" class="node" pointer-events="visible" data-name="ChangementMotPasseNonOk">
+
+<ellipse fill="none" stroke="black" cx="1139" cy="-136.71" rx="136.91" ry="136.91" style=""/>
+<text text-anchor="start" x="1050.33" y="-160.11" font-family="Times,serif" font-weight="bold" font-size="14.00" style="">ChangementMotPasseNonOk</text>
+<text text-anchor="start" x="1099.15" y="-146.11" font-family="Times,serif" font-size="14.00" style="">R clignote, !V</text>
+<text text-anchor="start" x="1131.61" y="-132.11" font-family="Times,serif" font-size="14.00" style="">!O</text>
+<text text-anchor="start" x="1133.29" y="-118.11" font-family="Times,serif" font-size="14.00" style="">""</text>
+<text text-anchor="start" x="1135.5" y="-104.11" font-family="Times,serif" font-size="14.00" style="">0</text>
+</g>
+<!-- ChangementMotPasseNonOkAttente&#45;&gt;ChangementMotPasseNonOk -->
+<g id="edge21" class="edge" data-name="ChangementMotPasseNonOkAttente-&gt;ChangementMotPasseNonOk">
+
+<path fill="none" stroke="black" d="M1045.72,-341.18C1056.52,-317.62 1067.6,-293.44 1078.19,-270.35" style=""/>
+<polygon fill="black" stroke="black" points="1081.39,-271.77 1082.37,-261.22 1075.03,-268.85 1081.39,-271.77" style=""/>
+<text text-anchor="middle" x="1098.69" y="-295.61" font-family="Times,serif" font-size="14.00" style="">Timeout 1s</text>
+</g>
+<!-- ChangementMotPasseNonOk&#45;&gt;Repos1 -->
+<g id="edge22" class="edge" data-name="ChangementMotPasseNonOk-&gt;Repos1">
+
+<path fill="none" stroke="black" d="M1182.39,-266.59C1201.2,-333.42 1219,-416.85 1219,-493.25 1219,-1937.53 1219,-1937.53 1219,-1937.53 1219,-2034.8 891.21,-2078.46 748.31,-2092.88" style=""/>
+<polygon fill="black" stroke="black" points="747.95,-2089.4 738.34,-2093.87 748.64,-2096.36 747.95,-2089.4" style=""/>
+<text text-anchor="middle" x="1250.69" y="-1494.21" font-family="Times,serif" font-size="14.00" style="">Timeout 1s</text>
+</g>
+</g>
+</svg>
