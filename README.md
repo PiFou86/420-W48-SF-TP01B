@@ -7,7 +7,7 @@
 - Le projet est réalisé en équipe de 2 personnes
 - Vous devez utiliser Git pour gérer vos sources
 - Vous devez utiliser SharePoint pour gérer votre document de rapport (Onglet "Fichiers" de votre équipe Teams)
-- La remise du travail doit être effectuée sur et à la date indiquée  sur la plateforme d'enseignement
+- La remise du travail doit être effectuée sur et à la date indiquée sur la plateforme d'enseignement Omnivox
 
 ### 1.2 - À remettre sur la plateforme d'enseignement
 
@@ -18,7 +18,7 @@
 ### 1.3 - Structure de la remise
 
 - Vous devez remplir le fichier "AUTHORS.md".
-  Il donne le nom et matricule des équipiers
+  Il donne le nom et matricule des membres de l'équipe.
 - Votre code source doit être dans le répertoire  ```src``` du présent dépôt Git
 - Le répertoire source doit suivre la structure d’un projet Platform.io
 - Vous devez fournir une vidéo de 5 minutes illustrant le circuit, le code et le fonctionnement :
@@ -92,10 +92,12 @@ La serrure reste déverrouillée durant cinq (5) secondes.
 
 ### 2.2 - Modification du code
 
-Pour modifier le code, le client doit déverrouiller la serrure et dans le délai de cinq (5) secondes, il doit appuyer simultanément sur les trois (3) boutons poussoirs pendant deux (2) secondes. La DEL verte clignote à une fréquence de deux (2) Hz. L'utilisateur peut alors taper les quatre (4) lettres du code. La DEL verte reste allumée une (1) seconde et se remet à clignoter à une fréquence de deux (2) Hz en attente de la répétition du nouveau code. Si le code est correct, la DEL verte et la DEL rouge clignote pendant une (1) seconde à une fréquence de deux (2) Hz et le nouveau code est en fonction. Si la deuxième saisie n'est pas la même que la première, la DEL rouge reste allumée pendant une seconde et le nouveau code n'est pas pris en compte.
+Pour modifier le code, le client doit déverrouiller la serrure. Il doit appuyer simultanément sur les trois (3) boutons poussoirs pendant deux (2) secondes. Il dispose de cinq (5) secondes pour effectuer son choix. La DEL verte clignote alors à une fréquence de deux (2) Hz pendant cette période. L'utilisateur relâche ensuite les trois (3) boutons. Pour valider son choix, il peut alors taper les quatre (4) lettres du code une première fois. La DEL verte reste allumée une (1) seconde et se remet à clignoter à une fréquence de deux (2) Hz. Le client répète le nouveau code. Si le code est correct, la DEL verte et la DEL rouge clignote pendant une (1) seconde à une fréquence de deux (2) Hz et le nouveau code est en fonction. Si la deuxième saisie n'est pas la même que la première, la DEL rouge reste allumée pendant une seconde et le nouveau code n'est pas pris en compte. Ce cylce pourra être refait sinon le mode de base est repris.
 
 ### 2.3 - Diagramme et tableau machine état fini
 
+- Légende des symboles dans uen bulle-état: R: rouge; V: verte; O: serrure ouverte; nombre d'essais
+- Légende préfixé par !: inverse
 ![](doc/EtatTransition.svg)
 
 |   | **Nombre transitions** | **Démarrage** | **Repos1** | **Repos2** | **SaisieCode** | **CodeValide** | **CodeInvalide** | **CodeInvalideEssaisInférieurLimite** | **CodeInvalideEssaisSuppérieurEgaleLimite** | **ChangementMotPasse** | **ChangementMotPasseConfirmation** | **ChangementMotPasseOkAttente** | **ChangementMotPasseOk** | **ChangementMotPasseNonOkAttente** | **ChangementMotPasseNonOk** |
